@@ -1,4 +1,3 @@
-sudo apt install git
 #!/bin/bash
 command=(
   "sudo snap refresh"
