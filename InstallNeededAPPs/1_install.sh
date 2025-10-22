@@ -20,8 +20,9 @@ echo ""
 
 
 apps=(
+  "make"
+  "build-essential"
   "git"
-  "docker"
   "net-tools"
   "iptables"
   "ca-certificates"
