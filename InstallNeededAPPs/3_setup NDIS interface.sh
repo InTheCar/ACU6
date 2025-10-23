@@ -1,5 +1,5 @@
 #!/bin/bash
-searchfor=wlan0:
+searchfor=enx001122334455
 gotit=$(eval ip address|grep -o "$searchfor"|wc -l)
 # gotit="(($gotit))"
 while [ ! $gotit -eq 1 ]
@@ -13,5 +13,8 @@ do
     gotit=$(eval ip address|grep -o "$searchfor"|wc -l)
     echo $gotit
 done
+sudo ip address add 198.18.1.2/24 dev enx001122334455
+sudo ip link set enx001122334455 up
+
 
 
