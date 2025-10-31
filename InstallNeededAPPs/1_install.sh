@@ -1,10 +1,20 @@
 #!/bin/bash
+InstallFailed () {
+  echo ""
+  echo "failed to install"
+  echo "$1"
+  echo "please fix it"
+  exit -42
+
+}
 command=(
   "sudo snap refresh"
   "sudo apt-get update"
   "sudo apt-get -y upgrade"
 )
 SECONDS=0
+echo copy files to etc
+sudo cp
 for i in "${command[@]}"
 do
   echo ""
@@ -28,7 +38,6 @@ apps=(
   "ca-certificates"
   "curl"
   "build-essential"
-  "docker-desktop-amd64.deb"
   "software-properties-common"
   "apt-transport-https"
   "docker-ce"
@@ -43,7 +52,7 @@ for i in "${apps[@]}"
 do
   echo ""
   echo "perform: sudo apt-get -y install $i"
-  eval sudo apt-get -y install $i || echo failed: sudo apt-get -y install $i
+  eval sudo apt-get -y install $i || InstallFailed "$i"
 done
 echo ""
 duration=$SECONDS
