@@ -4,7 +4,7 @@ InstallFailed () {
   echo "failed to install"
   echo "$1"
   echo "please fix it"
-  exit -42
+  exit
 
 }
 command=(
