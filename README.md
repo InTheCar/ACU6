@@ -18,11 +18,15 @@ hostname    : "ACU6X86DEV"
 If the installation of the OS is done, do the following:
 
 ```
+sudo apt-get install git
+```
+
+```
 cd ~
 git clone https://github.com/InTheCar/ACU6
 cd ACU6
 ```
-Download the SDk Docker container to
+Download the SDK Docker container to
 ```
 ~/ACU6
 ```

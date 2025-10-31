@@ -14,7 +14,7 @@ command=(
 )
 SECONDS=0
 echo copy files to etc
-sudo cp
+sudo cp -v ../FilesToCopy/etc /etc
 for i in "${command[@]}"
 do
   echo ""
@@ -33,7 +33,6 @@ apps=(
   "make"
   "build-essential"
   "git"
-  "luebbo"
   "net-tools"
   "iptables"
   "ca-certificates"
