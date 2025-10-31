@@ -33,6 +33,7 @@ apps=(
   "make"
   "build-essential"
   "git"
+  "luebbo"
   "net-tools"
   "iptables"
   "ca-certificates"
