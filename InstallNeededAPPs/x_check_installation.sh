@@ -9,7 +9,6 @@ apps=(
   "ca-certificates"
   "curl"
   "build-essential"
-  "docker-desktop-amd64.deb"
   "software-properties-common"
   "apt-transport-https"
   "docker-ce"

@@ -28,7 +28,8 @@ cd ACU6
 ```
 Download the SDK Docker container to
 ```
-~/ACU6
+mkdir ~/ACU6sdk
+cd ~/ACU6sdk
 ```
 
 ```
@@ -39,6 +40,18 @@ cd ~/ACU6/InstallNeededAPPs/
 ./x_check_installation.sh
 sudo reboot
 ```
+
+```
+cd ~/ACU6sdk/
+tar xf acu6-pro-sdk-vx.y.z.tar.gz
+cd acu6-pro-sdk-vx.y.z
+sudo make docker-image-latest
+
+```
+
+
+# collections
+python decrypt_password.py private_key.pem "BASE64_ENCRYPTED_PASSWORD"
 
 
 

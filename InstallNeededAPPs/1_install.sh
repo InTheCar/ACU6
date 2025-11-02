@@ -28,7 +28,7 @@ sudo apt-get update
 sudo usermod -aG docker,dialout,plugdev $USER
 
 echo copy files to etc
-sudo cp -vr ../FilesToCopy/etc /etc
+sudo cp -vr ../FilesToCopy/etc/ /etc/
 echo copy ssh config
 sudo cp -v ../FilesToCopy/home/.ssh/config ~/.ssh/
 
@@ -48,6 +48,9 @@ echo ""
 
 apps=(
   "make"
+  "pipx"
+  "keepassxc"
+  "python-ecies"
   "build-essential"
   "git"
   "net-tools"
