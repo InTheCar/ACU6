@@ -48,6 +48,8 @@ echo ""
 
 apps=(
   "make"
+  "gparted"
+  "exfatprogs"
   "pipx"
   "keepassxc"
   "python-ecies"
