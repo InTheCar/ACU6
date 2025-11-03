@@ -42,9 +42,18 @@ HW is on your desk.
 ./2_setup NDIS interface.sh
 ```
 The next script is may be not complete, but it performs some checks. 
-After this perform a reboot.
+You should see that docker is starting a docker container 
+named "hello-world". In the output from docker you must see the following:
+
+**Hello from Docker!
+
+This message shows that your installation appears to be working correctly.**
+
 ```
 ./x_check_installation.sh
+```
+Perform a reboot.
+```
 sudo reboot
 ```
 Now we can start with the first application for the ACU6.
