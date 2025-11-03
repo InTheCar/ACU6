@@ -85,6 +85,23 @@ Extract this file.
 cd ~/ACU6apps/HelloWorld/sdk/
 tar xf acu6-pro-sdk-vx.y.z.tar.gz
 ```
+Now some secret :-)
+
+Put the following files
+
+**company-private.pem**
+
+**company_keystore_acu6_dev.bpak**
+
+here:
+
+~/ACU6apps/HelloWorld/files/
+
+The next step is to put the device password in the file **device-password.txt**
+```
+nano ~/ACU6apps/HelloWorld/files/device-password.txt
+```
+
 
 
 
