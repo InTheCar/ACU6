@@ -97,6 +97,8 @@ here:
 
 ~/ACU6apps/HelloWorld/files/
 
+# lth 
+
 The next step is to put the device password in the file **device-password.txt**
 ```
 nano ~/ACU6apps/HelloWorld/files/device-password.txt
