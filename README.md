@@ -117,6 +117,14 @@ Create the package folder "led-example"
 ```
 mkdir ~/ACU6apps/HelloWorld/externals/myproj/led-example
 ```
+Creating needed empty files and directories
+```
+touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/Config.in
+mkdir ~/ACU6apps/HelloWorld/externals/myproj/led-example/files/
+touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/files/led_example.c
+touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/files/Makefile
+touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/led-example.mk
+```
 
 
 
