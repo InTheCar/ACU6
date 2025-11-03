@@ -65,7 +65,14 @@ This can also be found here in the chapter "Creating your first application"
 https://production.connect.actia.se/docs/acu6-pro/latest/
 ```
 mkdir -p ~/ACU6apps/HelloWorld
+cd ~/ACU6apps/HelloWorld
+wget "https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip"
 ```
+
+https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip
+
+
+
 
 ```
 cd ~/ACU6sdk/
