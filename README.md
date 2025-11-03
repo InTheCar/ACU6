@@ -115,7 +115,7 @@ sudo make defconfig
 ```
 Create the package folder "led-example"
 ```
-mkdir ~/ACU6apps/HelloWorld/externals/package/led-example
+mkdir ~/ACU6apps/HelloWorld/externals/myproj/led-example
 ```
 
 
