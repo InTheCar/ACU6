@@ -59,7 +59,7 @@ sudo reboot
 Now we can start with the first application for the ACU6.
  It's "Hello World" from ACTIA.
 
-At first, we will create a directory for this application. 
+At first, we will create a directory for this application and create the file structure for the project. 
 This can also be found here in the chapter "Creating your first application"
 
 https://production.connect.actia.se/docs/acu6-pro/latest/
@@ -68,8 +68,23 @@ mkdir -p ~/ACU6apps/HelloWorld
 cd ~/ACU6apps/HelloWorld
 wget "https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip"
 ```
+Extract the template.
+```
+unzip project-template.zip
+```
+In the Device Manager under Files, you can download the SDK.
 
-https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip
+The filename is something like this "acu6-pro-sdk-vx.y.z.tar.gz"
+
+Move this file to the SDK directory of the project:
+
+~/ACU6apps/HelloWorld/sdk/
+
+Extract this file.
+```
+cd ~/ACU6apps/HelloWorld/sdk/
+tar xf acu6-pro-sdk-vx.y.z.tar.gz
+```
 
 
 
