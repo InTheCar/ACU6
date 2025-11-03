@@ -106,30 +106,23 @@ nano ~/ACU6apps/HelloWorld/files/device-password.txt
 make Docker environment.
 ```
 cd ~/ACU6apps/HelloWorld/
-make docker-image-latest
-```
-
-
-
-
-
-```
-cd ~/ACU6sdk/
-tar xf acu6-pro-sdk-vx.y.z.tar.gz
-cd acu6-pro-sdk-vx.y.z
 sudo make docker-image-latest
-
 ```
+Reset Configuration to Default
+```
+cd ~/ACU6apps/HelloWorld/
+sudo make defconfig
+```
+Create the package folder "led-example"
+```
+mkdir ~/ACU6apps/HelloWorld/externals/package/led-example
+```
+
 
 
 # collections
 python decrypt_password.py private_key.pem "BASE64_ENCRYPTED_PASSWORD"
 
-Download the SDK Docker container to
-```
-mkdir ~/ACU6sdk
-cd ~/ACU6sdk
-```
 
 Python ACU6 venv
 
