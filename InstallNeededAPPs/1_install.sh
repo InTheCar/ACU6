@@ -52,7 +52,6 @@ apps=(
   "exfatprogs"
   "pipx"
   "keepassxc"
-  "python-ecies"
   "build-essential"
   "git"
   "net-tools"

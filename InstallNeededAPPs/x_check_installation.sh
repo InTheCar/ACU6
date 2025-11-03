@@ -3,6 +3,12 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 apps=(
   "make"
+  "gparted"
+  "exfatprogs"
+  "pipx"
+  "keepassxc"
+  "python-ecies"
+  "build-essential"
   "git"
   "net-tools"
   "iptables"
@@ -15,8 +21,7 @@ apps=(
   "docker-ce-cli"
   "containerd.io"
   "docker-buildx-plugin"
-  "docker-compose-plugin"
-)
+  "docker-compose-plugin")
 SECONDS=0
 for i in "${apps[@]}"
 do

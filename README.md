@@ -30,15 +30,30 @@ cd ~
 git clone https://github.com/InTheCar/ACU6
 cd ACU6
 ```
+Install some APPs:
 ```
 cd ~/ACU6/InstallNeededAPPs/
 ./1_install.sh
-./2_configure.sh
-./3_setup NDIS interface.sh
+```
+This step is to configure the NDIS interface. Herefor it's 
+necessary to have the ACU6 HW. This step can be skipped til the 
+HW is on your desk.
+```
+./2_setup NDIS interface.sh
+```
+The next script is may be not complete, but it performs some checks. 
+After this perform a reboot.
+```
 ./x_check_installation.sh
 sudo reboot
 ```
+Now we can start with the first application for the ACU6.
+ It's "Hello World" from ACTIA.
 
+At first, we will create a directory for this application.
+```
+mkdir ~/ACU6apps/HelloWorld
+```
 ```
 cd ~/ACU6sdk/
 tar xf acu6-pro-sdk-vx.y.z.tar.gz
@@ -56,6 +71,10 @@ Download the SDK Docker container to
 mkdir ~/ACU6sdk
 cd ~/ACU6sdk
 ```
+
+Python ACU6 venv
+
+  "python-ecies"
 
 
 
