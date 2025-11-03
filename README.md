@@ -61,7 +61,7 @@ Now we can start with the first application for the ACU6.
 
 At first, we will create a directory for this application.
 ```
-mkdir ~/ACU6apps/HelloWorld
+mkdir -p ~/ACU6apps/HelloWorld
 ```
 ```
 cd ~/ACU6sdk/
