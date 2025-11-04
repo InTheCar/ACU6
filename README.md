@@ -57,7 +57,28 @@ Perform a reboot.
 sudo reboot
 ```
 Now we can start with the first application for the ACU6.
- It's "Hello World" from ACTIA.
+ It's "Hello ACU6" from ACTIA.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 At first, we will create a directory for this application and create the file structure for the project. 
 This can also be found here in the chapter "Creating your first application"
