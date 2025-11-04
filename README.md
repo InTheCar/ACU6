@@ -125,11 +125,100 @@ touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/files/led_example.c
 touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/files/Makefile
 touch ~/ACU6apps/HelloWorld/externals/myproj/led-example/led-example.mk
 ```
+File the files with content
+```
+cat >~/ACU6apps/HelloWorld/externals/myproj/led-example/Config.in <<EOL
+config BR2_PACKAGE_LED_EXAMPLE
+     bool "led-example"
+     select BR2_PACKAGE_ACTIA_LIB
+     help
+             LED example 
+EOL
+
+cat >~/ACU6apps/HelloWorld/externals/myproj/led-example/files/led_example.mk <<EOL
+################################################################################
+#
+# led-example
+#
+################################################################################
+
+LED_EXAMPLE_VERSION = 0.1
+LED_EXAMPLE_SITE = $(LED_EXAMPLE_PKGDIR)/files
+LED_EXAMPLE_SITE_METHOD = local
+LED_EXAMPLE_LICENSE = Actia Software License Agreement
+LED_EXAMPLE_LICENSE_FILES = EULA COPYING
+LED_EXAMPLE_REDISTRIBUTE = NO
+LED_EXAMPLE_INSTALL_TARGET = YES
+LED_EXAMPLE_DEPENDENCIES = actia-lib
+
+define LED_EXAMPLE_BUILD_CMDS
+    $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $ $(@D)
+endef
+
+define LED_EXAMPLE_INSTALL_TARGET_CMDS
+    $(MAKE) -C $(@D) install DESTDIR=$(TARGET_DIR) PREFIX=/usr
+endef
+
+$(eval $(generic-package))
+EOL
+
+cat >~/ACU6apps/HelloWorld/externals/myproj/led-example/files/led_example.c <<EOL
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Under construction\n");
+
+    return 0;
+}
+EOL
+
+cat >~/ACU6apps/HelloWorld/externals/myproj/led-example/files/Makefile <<EOL
+TARGET_BIN  = led-example
+
+CFLAGS  += -MMD -MP -Wall -Wextra -pedantic -Werror -Wno-error=deprecated-declarations
+
+LIBS    += -lactia
+
+C_SRCS   = led_example.c
+
+OBJS     += $(patsubst %.c, $(BUILD_DIR)/%.o, $(C_SRCS))
+OBJS     += $(patsubst %.S, $(BUILD_DIR)/%.o, $(ASM_SRCS))
+
+DEPS = $(OBJS:%.o=%.d)
+
+BUILD_DIR = build
+
+.PHONY: all
+
+all: $(BUILD_DIR)/$(TARGET_BIN)
+
+$(BUILD_DIR)/$(TARGET_BIN): $(OBJS)
+	@echo LINK $@ $(LDFLAGS)
+	@$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o $@
+
+$(BUILD_DIR)/%.o: %.c
+	@echo CC $<
+	@mkdir -p $(@D)
+	@$(CC) -c $(CFLAGS) $< -o $@
+
+install: all
+	@install -m 755 $(BUILD_DIR)/$(TARGET_BIN) $(DESTDIR)/$(PREFIX)/bin
+
+clean:
+	@-rm -rf $(BUILD_DIR)/
+
+-include $(DEPS)
+EOL
+
+```
+
 
 
 
 # collections
 python decrypt_password.py private_key.pem "BASE64_ENCRYPTED_PASSWORD"
+https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip
 
 
 Python ACU6 venv
