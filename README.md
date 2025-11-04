@@ -80,6 +80,7 @@ Now we can start with the first application for the ACU6.
 
 
 
+
 At first, we will create a directory for this application and create the file structure for the project. 
 This can also be found here in the chapter "Creating your first application"
 
