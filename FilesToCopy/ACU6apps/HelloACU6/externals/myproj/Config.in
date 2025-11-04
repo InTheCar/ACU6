@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_MYPROJ_PATH/package/hello-acu6/Config.in"
