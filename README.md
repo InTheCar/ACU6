@@ -57,6 +57,11 @@ To this folder:
 ```
 cd ~/ACU6/docker
 ```
+Extract the archive:
+
+```
+tar xf acu6-pro-sdk-*.tar.gz
+```
 
 
 
