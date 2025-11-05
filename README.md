@@ -1,7 +1,12 @@
 # ACU6
 ## Before you start
 If you are interested in the product which I'm using, here is the link:
+
 https://actia.se/media/2105/acu6-pro-off-highway-produktblad.pdf
+
+There are other products available:
+
+https://actia.se/our-products/
 
 The target is to install Docker and run there the SDK for the ACU6 .
 
@@ -9,7 +14,8 @@ It's **mandatory** that you have the development **HW** ACU6 from ACTIA and
 
 a valid **account** for the ACTIA DM (device manager).
 
-The target of this repository is to make the installation easy for my colleges.
+The target of this repository is to make the installation easy 
+for my colleges.
 
 At the end the example "Hell World" from ACTIA should work.
 
@@ -40,6 +46,9 @@ Install some APPs:
 cd ~/ACU6/InstallNeededAPPs/
 ./1_install.sh
 ```
+Now we need a docker container to keep the ACU 6 awake. Foe this we need to download the SDK from the ACTIA device 
+manager.
+
 This step is to configure the NDIS interface. Herefor it's 
 necessary to have the ACU6 HW. This step can be skipped til the 
 HW is on your desk.
