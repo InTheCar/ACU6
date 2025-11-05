@@ -4,9 +4,9 @@ The target is to install Docker and run there the SDK for the ACU6.
 
 It's **mandatory** that you have the development **HW** ACU6 from ACTIA and 
 
-an **account** a valid account for the ACTIA DM (device manager).
+a valid **account** for the ACTIA DM (device manager).
 
-The target of this repository is to make the installation easy.
+The target of this repository is to make the installation easy for my colleges.
 
 At the end the example "Hell World" from ACTIA should work.
 
@@ -21,7 +21,7 @@ hostname    : "ACU6X86DEV"
 
 If the installation of the OS is done, boot it and do the following:
 
-git is needed to get the ACU6 repository.
+git is needed to get this ACU6 repository with the scripts.
 
 ```
 sudo apt-get install git

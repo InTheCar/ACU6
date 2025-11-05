@@ -1,5 +1,6 @@
 #!/bin/bash
 InstallFailed () {
+  ## will be called if an installation failed
   echo ""
   echo "failed to install"
   echo "$1"
@@ -28,9 +29,10 @@ sudo apt-get update
 sudo usermod -aG docker,dialout,plugdev $USER
 
 echo copy files to etc
-sudo cp -vr ../FilesToCopy/etc/ /etc/
+sudo cp -vr ../FilesToCopy/etc/ /
 echo copy ssh config
 sudo cp -v ../FilesToCopy/home/.ssh/config ~/.ssh/
+
 
 for i in "${command[@]}"
 do
