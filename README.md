@@ -70,6 +70,7 @@ sudo make docker-image-latest
 ```
 Now we need a reboot
 ```
+sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo reboot
 ```
 
