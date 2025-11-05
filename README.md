@@ -8,7 +8,7 @@ There are other products available:
 
 https://actia.se/our-products/
 
-The target is to install Docker and run there the SDK for the ACU6 .
+The target is to install Docker and run the SDK for the ACU6 .
 
 It's **mandatory** that you have the development **HW** ACU6 from ACTIA and 
 
@@ -17,20 +17,22 @@ a valid **account** for the ACTIA DM (device manager).
 The target of this repository is to make the installation easy 
 for my colleges.
 
-At the end the example "Hell World" from ACTIA should work.
+At the end this repository "Hello ACU6" from ACTIA should work.
 
 ## Installation of Ubuntu
+I installed it on a external 1TB SSD. I don't want to get extra challenge if I start to use a virtual machine.
+
 OS          : "Ubuntu Desktop 24.04.3 LTS"
 
-architecture: "x86_64" (ARM is not supported)
+architecture: "x86_64" (**ARM64** is not supported)
 
 hostname    : "ACU6X86DEV"
 
 ## Install and configure the environment for the SDK
 
-If the installation of the OS is done, boot it and do the following:
+If the installation of the **OS** is done, **reboot** it and do the following:
 
-git is needed to get this ACU6 repository with the scripts.
+git is needed to get this ACU6 repository with the scripts and some directories.
 
 ```
 sudo apt-get install git
