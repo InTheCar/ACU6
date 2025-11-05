@@ -1,6 +1,9 @@
 # ACU6
 ## Before you start
-The target is to install Docker and run there the SDK for the ACU6.
+If you are interested in the product which I'm using, here is the link:
+https://actia.se/media/2105/acu6-pro-off-highway-produktblad.pdf
+
+The target is to install Docker and run there the SDK for the ACU6 .
 
 It's **mandatory** that you have the development **HW** ACU6 from ACTIA and 
 
