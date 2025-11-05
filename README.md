@@ -47,7 +47,9 @@ cd ~/ACU6/InstallNeededAPPs/
 ./1_install.sh
 ```
 Now we need a docker container to keep the ACU 6 awake. Foe this we need to download the SDK from the ACTIA device 
-manager.
+manager. The SDK is located in the files menu of the device manager.
+
+
 
 This step is to configure the NDIS interface. Herefor it's 
 necessary to have the ACU6 HW. This step can be skipped til the 
