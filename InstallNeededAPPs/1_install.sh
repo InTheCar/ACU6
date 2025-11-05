@@ -47,11 +47,11 @@ echo ""
 
 
 apps=(
+  "gedit"
   "make"
   "gparted"
   "exfatprogs"
-  "pip"
-  "pipx"
+  "python3-pip"
   "keepassxc"
   "build-essential"
   "git"
@@ -62,11 +62,11 @@ apps=(
   "build-essential"
   "software-properties-common"
   "apt-transport-https"
-  "docker-ce"
   "docker-ce-cli"
   "containerd.io"
   "docker-buildx-plugin"
   "docker-compose-plugin"
+  "docker-ce"
 )
 
 SECONDS=0

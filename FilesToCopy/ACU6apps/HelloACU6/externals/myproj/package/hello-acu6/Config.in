@@ -1,4 +1,0 @@
-config BR2_PACKAGE_HELLO_ACU6
-	bool "hello-acu6"
-	help
-	   Hello ACU6 demo application

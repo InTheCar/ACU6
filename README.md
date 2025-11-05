@@ -41,7 +41,7 @@ This step is to configure the NDIS interface. Herefor it's
 necessary to have the ACU6 HW. This step can be skipped til the 
 HW is on your desk.
 ```
-./2_setup NDIS interface.sh
+./2_setupNDISinterface.sh
 ```
 The next script is may be not complete, but it performs some checks. 
 You should see that docker is starting a docker container 
@@ -62,23 +62,33 @@ sudo reboot
 Now we can start with the first application for the ACU6.
  It's "Hello ACU6" from ACTIA.
 
+You can find it here:
 
-Create the directory ~/ACU6apps and the subdirectory ~/ACU6apps/HelloACU6 with the structure 
-for the app.
-In the Device Manager under Files, you can download the SDK.
+https://production.connect.actia.se/docs/acu6-pro/latest/getting-started/03_create_linux_distro.html
+```
+~/ACU6/ACU6examples/HelloACU6prepare.sh
+```
 
-The filename is something like this "acu6-pro-sdk-vx.y.z.tar.gz"
+In the **Device Manager** under Files, you can download the SDK.
+
+The filename is something like this **"acu6-pro-sdk-vx.y.z.tar.gz"**
 
 Move this file to the SDK directory of the project:
 
-~/ACU6apps/HelloACU6/sdk/
+**~/ACU6apps/HelloACU6/sdk/**
 
 Extract this file.
 ```
 cd ~/ACU6apps/HelloACU6/sdk/
 tar xf acu6-pro-sdk-vx.y.z.tar.gz
 ```
-Write the encrypted maintenance password into the file ...
+
+```
+cd ~/ACU6apps/HelloACU6/sdk/acu6-pro-sdk-vx.y.z/
+sudo make docker-image-latest
+```
+
+Write the encrypted **maintenance** password into the file ...
 ```
 nano ~/ACU6apps/HelloACU6/files/device-password.txt
 ```
@@ -88,14 +98,16 @@ Put
 
 **company_keystore_acu6_dev.bpak**
 
-in the in the directory ~/ACU6apps/HelloACU6/files/
+in the in the directory **~/ACU6apps/HelloACU6/files/**
 
 ```
-make defconfig
+cd ~/ACU6apps/HelloACU6/
+sudo make defconfig
 ```
 
 ```
-make
+cd ~/ACU6apps/HelloACU6/
+sudo make
 ```
 
 
