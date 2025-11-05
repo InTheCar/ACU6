@@ -68,6 +68,12 @@ Change to the directory which was created by uncompress the archive and build th
 cd ~/ACU6/docker/acu6-pro-sdk-*/
 sudo make docker-image-latest
 ```
+Now we need a reboot
+```
+sudo reboot
+```
+
+
 Keep the acu awake:
 ```
 ~/ACU6/docker/acu6-pro-sdk-*/rundocker.sh utils/onsw.sh on
