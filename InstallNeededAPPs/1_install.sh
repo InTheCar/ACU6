@@ -50,6 +50,7 @@ apps=(
   "make"
   "gparted"
   "exfatprogs"
+  "pip"
   "pipx"
   "keepassxc"
   "build-essential"

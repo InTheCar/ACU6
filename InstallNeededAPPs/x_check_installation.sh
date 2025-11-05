@@ -5,9 +5,9 @@ apps=(
   "make"
   "gparted"
   "exfatprogs"
+  "pip"
   "pipx"
   "keepassxc"
-  "python-ecies"
   "build-essential"
   "git"
   "net-tools"
@@ -21,7 +21,9 @@ apps=(
   "docker-ce-cli"
   "containerd.io"
   "docker-buildx-plugin"
-  "docker-compose-plugin")
+  "docker-compose-plugin"
+
+)
 SECONDS=0
 for i in "${apps[@]}"
 do

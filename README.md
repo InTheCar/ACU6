@@ -17,6 +17,8 @@ architecture: "x86_64" (ARM is not supported)
 
 hostname    : "ACU6X86DEV"
 
+## Install and configure the environment for the SDK
+
 If the installation of the OS is done, boot it and do the following:
 
 git is needed to get the ACU6 repository.
@@ -56,10 +58,45 @@ Perform a reboot.
 ```
 sudo reboot
 ```
+## Hello ACU6
 Now we can start with the first application for the ACU6.
  It's "Hello ACU6" from ACTIA.
 
 
+Create the directory ~/ACU6apps and the subdirectory ~/ACU6apps/HelloACU6 with the structure 
+for the app.
+In the Device Manager under Files, you can download the SDK.
+
+The filename is something like this "acu6-pro-sdk-vx.y.z.tar.gz"
+
+Move this file to the SDK directory of the project:
+
+~/ACU6apps/HelloACU6/sdk/
+
+Extract this file.
+```
+cd ~/ACU6apps/HelloACU6/sdk/
+tar xf acu6-pro-sdk-vx.y.z.tar.gz
+```
+Write the encrypted maintenance password into the file ...
+```
+nano ~/ACU6apps/HelloACU6/files/device-password.txt
+```
+Put 
+
+**company-private.pem**
+
+**company_keystore_acu6_dev.bpak**
+
+in the in the directory ~/ACU6apps/HelloACU6/files/
+
+```
+make defconfig
+```
+
+```
+make
+```
 
 
 
@@ -67,6 +104,17 @@ Now we can start with the first application for the ACU6.
 
 
 
+
+
+
+
+
+cd ~/ACU6/
+python3 -m venv ACU6venv
+source ./ACU6venv/bin/activate
+pip install python_ecies
+
+python3 decrypt_password.py pem_file, password_b64
 
 
 
