@@ -62,6 +62,14 @@ Extract the archive:
 ```
 tar xf acu6-pro-sdk-*.tar.gz
 ```
+Change to the directory which was created by uncompress the archive and build the docker container:
+
+```
+cd ~/ACU6/docker/acu6-pro-sdk-*/
+sudo make docker-image-latest
+```
+
+
 
 
 
