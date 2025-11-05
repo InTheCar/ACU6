@@ -44,7 +44,6 @@ Download the ACU6 repository to your home directory.
 ```
 cd ~
 git clone https://github.com/InTheCar/ACU6
-cd ACU6
 ```
 Install some APPs:
 ```
