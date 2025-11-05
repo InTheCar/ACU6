@@ -34,6 +34,9 @@ If the installation of the **OS** is done, **reboot** it and do the following:
 
 git is needed to get this ACU6 repository with the scripts and some directories.
 
+To copy the commands, open this repository on the PC.
+
+
 ```
 sudo apt-get install git
 ```
