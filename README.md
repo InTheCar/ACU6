@@ -50,8 +50,14 @@ Install some APPs:
 cd ~/ACU6/InstallNeededAPPs/
 ./1_install.sh
 ```
-Now we need a docker container to keep the ACU 6 awake. Foe this we need to download the SDK from the ACTIA device 
+Now we need a docker container to keep the ACU 6 awake. For this we need to download the SDK from the ACTIA device 
 manager. The SDK is located in the files menu of the device manager.
+
+To this folder:
+```
+cd ~/ACU6/docker
+```
+
 
 
 
