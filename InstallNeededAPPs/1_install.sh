@@ -41,6 +41,13 @@ echo copy ssh config
 sudo cp -v ../FilesToCopy/home/.ssh/config ~/.ssh/
 
 
+echo apply netplan
+sudo chmod 600 /etc/netplan/*
+sudo netplan generate
+sudo netplan apply
+
+
+
 for i in "${command[@]}"
 do
   echo ""

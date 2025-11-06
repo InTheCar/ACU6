@@ -1,0 +1,4 @@
+** ACU6 power on **
+** the cd command is incomplete. Copy it and press on the TAB key **
+cd cd ~/ACU6/docker/acu6-pro-sdk-
+sudo ./rundocker.sh utils/onsw.sh on
