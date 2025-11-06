@@ -1,11 +1,12 @@
 #!/bin/bash
 PathOfAppToCopy=~/ACU6/FilesToCopy/ACU6apps/HelloACU6/
-TargetPathForApp=~/ACU6apps/
-if [ ! -d "$TargetPathForApp" ]; then
-  echo "Directory doesn't exists. $PathOfAppToCopy"
-  echo "creating $TargetPathForApp"
-  mkdir -p $PathOfAppToCopy
+TargetPathForAppDirectory=~/ACU6apps/
+AppPath=~/ACU6apps/HelloACU6/
+if [ ! -d "TargetPathForAppDirectory" ]; then
+  echo "Directory doesn't exists. $TargetPathForAppDirectory"
+  echo "creating $TargetPathForAppDirectory"
+  mkdir -p $TargetPathForAppDirectory
 fi
-cp -rv $PathOfAppToCopy $TargetPathForApp
-unzip "$PathOfAppToCopy/project-template.zip"
+cp -rv $PathOfAppToCopy $AppPath
+unzip "$AppPath/project-template.zip"
 
