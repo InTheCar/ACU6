@@ -8,5 +8,5 @@ if [ ! -d "TargetPathForAppDirectory" ]; then
   mkdir -p $TargetPathForAppDirectory
 fi
 cp -rv $PathOfAppToCopy $AppPath
-unzip "$AppPath/project-template.zip"
+unzip "$AppPath/project-template.zip" -d $PathOfAppToCopy
 
