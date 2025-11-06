@@ -77,19 +77,7 @@ sudo reboot
 
 Keep the acu awake:
 ```
-~/ACU6/docker/acu6-pro-sdk-*/rundocker.sh utils/onsw.sh on
-```
-
-
-
-
-
-
-This step is to configure the NDIS interface. Herefor it's 
-necessary to have the ACU6 HW. This step can be skipped til the 
-HW is on your desk.
-```
-./2_setupNDISinterface.sh
+sudo ~/ACU6/docker/acu6-pro-sdk-*/rundocker.sh utils/onsw.sh on
 ```
 The next script is may be not complete, but it performs some checks. 
 You should see that docker is starting a docker container 
@@ -102,10 +90,6 @@ named "hello-world". In the output from docker you must see the following:
 ```
 ./x_check_installation.sh
 ```
-Perform a reboot.
-```
-sudo reboot
-```
 ## Hello ACU6
 Now we can start with the first application for the ACU6.
  It's "Hello ACU6" from ACTIA.
@@ -113,6 +97,8 @@ Now we can start with the first application for the ACU6.
 You can find it here:
 
 https://production.connect.actia.se/docs/acu6-pro/latest/getting-started/03_create_linux_distro.html
+
+prepare the folder for "Hello ACU6"
 ```
 ~/ACU6/ACU6examples/HelloACU6prepare.sh
 ```
@@ -128,11 +114,11 @@ Move this file to the SDK directory of the project:
 Extract this file.
 ```
 cd ~/ACU6apps/HelloACU6/sdk/
-tar xf acu6-pro-sdk-vx.y.z.tar.gz
+tar xf acu6-pro-sdk-*.tar.gz
 ```
 
 ```
-cd ~/ACU6apps/HelloACU6/sdk/acu6-pro-sdk-vx.y.z/
+cd ~/ACU6apps/HelloACU6/sdk/acu6-pro-sdk-*/
 sudo make docker-image-latest
 ```
 
