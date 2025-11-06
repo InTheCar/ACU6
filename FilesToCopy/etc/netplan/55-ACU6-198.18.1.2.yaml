@@ -1,0 +1,5 @@
+network:
+  ethernets:
+    enx001122334455:
+      addresses:
+        - 198.18.1.2/24
