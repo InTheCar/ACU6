@@ -72,15 +72,19 @@ Change to the directory which was created by uncompress the archive and build th
 cd ~/ACU6/docker/acu6-pro-sdk-*/
 make docker-image-latest
 ```
-Now we need a reboot
-```
-```
 
 
 Keep the acu awake:
 ```
 sudo ~/ACU6/docker/acu6-pro-sdk-*/rundocker.sh utils/onsw.sh on
 ```
+Switch TCU off
+```
+sudo ~/ACU6/docker/acu6-pro-sdk-*/rundocker.sh utils/onsw.sh off
+```
+
+
+
 The next script is may be not complete, but it performs some checks. 
 You should see that docker is starting a docker container 
 named "hello-world". In the output from docker you must see the following:
