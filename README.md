@@ -117,11 +117,6 @@ cd ~/ACU6apps/HelloACU6/sdk/
 tar xf acu6-pro-sdk-*.tar.gz
 ```
 
-```
-cd ~/ACU6apps/HelloACU6/sdk/acu6-pro-sdk-*/
-sudo make docker-image-latest
-```
-
 Write the encrypted **maintenance** password into the file ...
 ```
 nano ~/ACU6apps/HelloACU6/files/device-password.txt
@@ -136,13 +131,27 @@ in the in the directory **~/ACU6apps/HelloACU6/files/**
 
 ```
 cd ~/ACU6apps/HelloACU6/
-sudo make defconfig
+make defconfig
 ```
 
 ```
 cd ~/ACU6apps/HelloACU6/
-sudo make
+make
 ```
+Here is my output when make finifhed:
+
+```
+user-bundle/
+user-bundle/user_boot.bpak
+user-bundle/user_rootfs.bpak
+user-bundle/user_keystore.bpak
+MANIFEST
+Final output provided in /home/luebbo/ACU6apps/HelloACU6/output/images/user-bundle.tar
+```
+
+
+
+# The rest of this text I have to sort
 
 
 
@@ -179,56 +188,6 @@ At first, we will create a directory for this application and create the file st
 This can also be found here in the chapter "Creating your first application"
 
 https://production.connect.actia.se/docs/acu6-pro/latest/
-```
-mkdir -p ~/ACU6apps/HelloWorld
-cd ~/ACU6apps/HelloWorld
-wget "https://production.connect.actia.se/docs/acu6-pro/latest/_downloads/be5920c19e4ea120f2d0cc7dfeb0501a/project-template.zip"
-```
-Extract the template.
-```
-unzip project-template.zip
-```
-In the Device Manager under Files, you can download the SDK.
-
-The filename is something like this "acu6-pro-sdk-vx.y.z.tar.gz"
-
-Move this file to the SDK directory of the project:
-
-~/ACU6apps/HelloWorld/sdk/
-
-Extract this file.
-```
-cd ~/ACU6apps/HelloWorld/sdk/
-tar xf acu6-pro-sdk-vx.y.z.tar.gz
-```
-Now some secret :-)
-
-Put the following files
-
-**company-private.pem**
-
-**company_keystore_acu6_dev.bpak**
-
-here:
-
-~/ACU6apps/HelloWorld/files/
-
-# lth 
-
-The next step is to put the device password in the file **device-password.txt**
-```
-nano ~/ACU6apps/HelloWorld/files/device-password.txt
-```
-make Docker environment.
-```
-cd ~/ACU6apps/HelloWorld/
-sudo make docker-image-latest
-```
-Reset Configuration to Default
-```
-cd ~/ACU6apps/HelloWorld/
-sudo make defconfig
-```
 Create the package folder "led-example"
 ```
 mkdir ~/ACU6apps/HelloWorld/externals/myproj/led-example

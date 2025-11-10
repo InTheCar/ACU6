@@ -33,8 +33,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt update
 
 
-sudo usermod -aG docker,dialout,plugdev $USER
-
 echo copy files to etc
 sudo cp -vr ../FilesToCopy/etc/ /
 echo copy ssh config
@@ -92,6 +90,8 @@ do
   echo "perform: sudo apt-get -y install $i"
   eval sudo apt-get -y install $i || InstallFailed "$i"
 done
+echo Add user to docker group
+sudo usermod -aG docker,dialout,plugdev $USER
 echo ""
 duration=$SECONDS
 echo "time for installing apps needed:"
