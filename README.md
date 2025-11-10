@@ -52,7 +52,6 @@ cd ~/ACU6/InstallNeededAPPs/
 ```
 Perform a reboot:
 ```
-sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo reboot
 ```
 Now we need a docker container to keep the ACU 6 awake. For this we need to **download** the SDK from the **ACTIA device 

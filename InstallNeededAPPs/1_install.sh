@@ -90,6 +90,7 @@ do
   echo "perform: sudo apt-get -y install $i"
   eval sudo apt-get -y install $i || InstallFailed "$i"
 done
+sudo udevadm control --reload-rules && sudo udevadm trigger
 echo Add user to docker group
 sudo usermod -aG docker,dialout,plugdev $USER
 echo ""
