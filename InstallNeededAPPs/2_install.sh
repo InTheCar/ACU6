@@ -1,0 +1,55 @@
+#!/bin/bash
+InstallFailed () {
+  ## will be called if an installation failed
+  echo ""
+  echo "failed to install"
+  echo "$1"
+  echo "please fix it"
+  exit
+
+}
+command=(
+  "sudo snap refresh"
+  "sudo apt-get update"
+  "sudo apt-get -y upgrade"
+)
+SECONDS=0
+
+for i in "${command[@]}"
+do
+  echo ""
+  echo "perform: $i"
+  eval $i || echo failed: $i
+  #eval "$1"
+done
+echo ""
+duration=$SECONDS
+echo "time for updates needed:"
+echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
+echo ""
+
+
+apps=(
+  "xrdp"
+  "dconf-cli"
+)
+
+SECONDS=0
+for i in "${apps[@]}"
+do
+  echo ""
+  echo "perform: sudo apt-get -y install $i"
+  eval sudo apt-get -y install $i || InstallFailed "$i"
+done
+#add xrdp to ssl-cert group
+sudo adduser $USER ssl-cert
+sudo systemctl restart xrdp
+
+dconf write /org/gnome/desktop/remote-access/enabled true
+dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
+sudo ufw allow 5900/tcp
+
+duration=$SECONDS
+echo "time for installing apps needed:"
+echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
+echo ""

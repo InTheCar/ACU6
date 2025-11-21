@@ -50,6 +50,12 @@ Install some APPs:
 cd ~/ACU6/InstallNeededAPPs/
 ./1_install.sh
 ```
+If you want to use it in the virtual machine Hyper-V install additional APPs.
+```
+cd ~/ACU6/InstallNeededAPPs/
+./2_install.sh
+```
+
 Perform a reboot:
 ```
 sudo reboot
