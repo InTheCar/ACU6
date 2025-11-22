@@ -28,9 +28,9 @@ echo "time for updates needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
-
+# "xrdp"
 apps=(
-  "xrdp"
+  "xubuntu-desktop"
   "dconf-cli"
   "openssh-server"
 )
