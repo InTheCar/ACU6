@@ -42,7 +42,7 @@ do
   echo "perform: sudo apt-get -y install $i"
   eval sudo apt-get -y install $i || InstallFailed "$i"
 done
-#add xrdp to ssl-cert group
+# add xrdp to ssl-cert group
 sudo adduser $USER ssl-cert
 sudo systemctl restart xrdp
 
