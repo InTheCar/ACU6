@@ -32,6 +32,7 @@ echo ""
 apps=(
   "xrdp"
   "dconf-cli"
+  "openssh-server"
 )
 
 SECONDS=0
