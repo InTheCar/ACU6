@@ -53,10 +53,10 @@ sudo systemctl restart xrdp
 
 #dconf write /org/gnome/desktop/remote-access/enabled true
 #dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
-s#udo ufw allow 5900/tcp
-s#udo ufw allow ssh
+sudo ufw allow 5900/tcp
+sudo ufw allow ssh
 sudo ufw allow 3389
-sudu ufw enable
+sudo ufw enable
 
 duration=$SECONDS
 echo "time for installing apps needed:"
