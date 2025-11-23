@@ -8,6 +8,12 @@ InstallFailed () {
   exit
 
 }
+
+# Prompt for remote desktop password
+echo -n "Enter your remote desktop password which you want to use: "
+read -s PASSWORD
+echo ""
+
 command=(
   "sudo snap refresh"
   "sudo apt-get update"
@@ -28,10 +34,9 @@ echo "time for updates needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
-# "xrdp"
+#  "dconf-cli"
 apps=(
-  "xubuntu-desktop"
-  "dconf-cli"
+  "xrdp"
   "openssh-server"
 )
 
@@ -46,11 +51,11 @@ done
 sudo adduser $USER ssl-cert
 sudo systemctl restart xrdp
 
-dconf write /org/gnome/desktop/remote-access/enabled true
-dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
-sudo ufw allow 5900/tcp
-sudo ufw allow ssh
-sudo ufw allow 3389/tcp
+#dconf write /org/gnome/desktop/remote-access/enabled true
+#dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
+s#udo ufw allow 5900/tcp
+s#udo ufw allow ssh
+sudo ufw allow 3389
 sudu ufw enable
 
 duration=$SECONDS
