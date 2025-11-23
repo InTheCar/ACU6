@@ -49,6 +49,8 @@ do
 done
 # add xrdp to ssl-cert group
 sudo adduser $USER ssl-cert
+echo "gnome-session"|tee ~/.xsession
+#echo "xfce4-session"|tee ~/.xsession
 sudo systemctl restart xrdp
 
 #dconf write /org/gnome/desktop/remote-access/enabled true
@@ -57,6 +59,7 @@ sudo systemctl restart xrdp
 sudo ufw allow ssh
 sudo ufw allow 3389
 sudo ufw enable
+
 
 duration=$SECONDS
 echo "time for installing apps needed:"
