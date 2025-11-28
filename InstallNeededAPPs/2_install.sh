@@ -36,6 +36,7 @@ echo ""
 
 #  "dconf-cli"
 apps=(
+  "gnome-session"
   "xrdp"
   "openssh-server"
 )
