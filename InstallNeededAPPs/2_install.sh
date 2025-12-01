@@ -51,11 +51,15 @@ done
 # add xrdp to ssl-cert group
 sudo adduser $USER ssl-cert
 echo "gnome-session"|tee ~/.xsession
+echo "export XAUTHORITY=${HOME}/.Xauthority" | tee ~/.xsessionrc
+echo "export GNOME_SHELL_SESSION_MODE=ubuntu" | tee -a ~/.xsessionrc
+echo "export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg" | tee -a ~/.xsessionrc
+
 #echo "xfce4-session"|tee ~/.xsession
 sudo systemctl restart xrdp
 
-#dconf write /org/gnome/desktop/remote-access/enabled true
-#dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
+dconf write /org/gnome/desktop/remote-access/enabled true
+dconf write /org/gnome/desktop/remote-access/disable-keyboard-shortcuts false
 #sudo ufw allow 5900/tcp
 sudo ufw allow ssh
 sudo ufw allow 3389
