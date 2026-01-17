@@ -8,7 +8,9 @@ There are other products available:
 
 https://actia.se/our-products/
 
-The target is to install Docker and run the SDK for the ACU6 .
+The target is to install Docker and run the SDK for the ACU6.
+
+Also some additinal SW will be installed.
 
 It's **mandatory** that you have the development **HW** ACU6 from ACTIA and 
 
@@ -20,7 +22,9 @@ for my colleges.
 At the end this repository "Hello ACU6" from ACTIA should work.
 
 ## Installation of Ubuntu
-I installed it on a external 1TB SSD. I don't want to get extra challenge if I start to use a virtual machine.
+I installed it on a external 1TB SSD. I don't want to get extra challenge if I start to use a virtual machine. 
+
+The installation is expecting an **new** Ubuntu installation.
 
 OS          : "Ubuntu Desktop 24.04.3 LTS"
 
