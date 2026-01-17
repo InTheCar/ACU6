@@ -42,7 +42,7 @@ To copy the commands, open this repository on the PC.
 
 
 ```
-sudo apt-get install git
+sudo apt-get -y install git
 ```
 Download the ACU6 repository to your home directory.
 ```
